@@ -28,15 +28,18 @@ function App() {
   return (
     <div className="App m-4">
       <SearchPhoto input={input} setInput={setInput} setQuerry={setQuerry} />
-
       {isLoading ?
-        <h1 className='text-center m-5'>Loading...</h1>
+        <h1 className='text-center m-10 text-3xl'>Loading...</h1>
         :
-        <div className='rounded-lg grid grid-cols-4 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1'>
-        {photos?.map((photo)=>(
-          <PhotoCard photo={photo} key={photo.id} />
-        ))}
-        </div>
+        <>
+          <h1 className='text-center m-10 text-3xl'>The result of <span className='font-bold text-rose-400 '>{querry}</span></h1>
+          <div className='rounded-lg grid grid-cols-4 gap-4 max-md:grid-cols-2 max-sm:grid-cols-1'>
+          {photos?.map((photo)=>(
+            <PhotoCard photo={photo} key={photo.id} />
+          ))}
+          </div>
+
+        </>
       }
  
  
