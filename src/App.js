@@ -19,6 +19,7 @@ function App() {
     .then(data => {
       setPhotos(data.hits)
       setIsLoading(false)
+      setInput('')
     })
     .catch((err) => console.log(err))
   },[querry])

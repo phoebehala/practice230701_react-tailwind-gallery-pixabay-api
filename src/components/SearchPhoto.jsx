@@ -23,6 +23,7 @@ const SearchPhoto = ({input, setInput, setQuerry}) => {
         name="search"
         type="text" 
         onChange={e=>{setInput(e.target.value)}}
+        value= {input}
         />
       <button type="submit"
         className='rounded-non
