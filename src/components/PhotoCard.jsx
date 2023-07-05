@@ -20,6 +20,10 @@ const PhotoCard = ({photo}) => {
               <p>likes: {photo.likes}</p>
               <p>downloads: {photo.downloads}</p>
             </div>
+
+            {photo.tags?.split(',').map(tag=>
+              <span className='rounded-lg bg-slate-300 p-2 mx-1'>{tag}</span>
+            )}
           </div>
 
     </div>

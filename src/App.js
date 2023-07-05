@@ -15,8 +15,8 @@ function App() {
     setIsLoading(true)
     fetch(`https://pixabay.com/api/?key=38016491-e6663f861e581e1a4e4a0f11f&q=${querry}&image_type=photo`)
     .then(response => response.json())
-    //.then(data => console.log(data.hits))
     .then(data => {
+      console.log(data.hits)
       setPhotos(data.hits)
       setIsLoading(false)
       setInput('')
